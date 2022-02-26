@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "83d3210e-f4b0-4ffb-a1f1-5d69e9f9eb3d",
+		"name": "Future Jobs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@gmail.com\",\n    \"password\": \"123456\",\n    \"name\": \"User Test\",\n    \"goal\": \"kerja di silicon valley\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bwa-jobs.herokuapp.com/register",
+					"protocol": "https",
+					"host": [
+						"bwa-jobs",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@gmail.com\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bwa-jobs.herokuapp.com/login",
+					"protocol": "https",
+					"host": [
+						"bwa-jobs",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Jobs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://bwa-jobs.herokuapp.com/jobs?category=Mobile Developer",
+					"protocol": "https",
+					"host": [
+						"bwa-jobs",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"jobs"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Mobile Developer"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://bwa-jobs.herokuapp.com/categories",
+					"protocol": "https",
+					"host": [
+						"bwa-jobs",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
